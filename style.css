@@ -218,39 +218,39 @@ h1 {
     cursor: pointer;
 }
 
-/* دوران الأسطوانة */
+
 .rotating { animation: rotateDisk 3s linear infinite; }
 @keyframes rotateDisk { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
-/* 1. حاوية النافذة المنبثقة (تغطي الشاشة بالكامل) */
+
 .modal-overlay {
-    display: none;             /* مخفية افتراضياً */
-    position: fixed;           /* ثابتة فوق كل العناصر */
+    display: none;           
+    position: fixed;           
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.85); /* خلفية داكنة لتركيز الانتباه */
-    backdrop-filter: blur(15px);     /* تأثير الضباب الزجاجي */
+    background: rgba(0, 0, 0, 0.85); 
+    backdrop-filter: blur(15px);     
     -webkit-backdrop-filter: blur(15px);
-    z-index: 99999;           /* أعلى طبقة في الموقع */
+    z-index: 99999;           
     justify-content: center;
     align-items: center;
     transition: all 0.3s ease-in-out;
 }
 
-/* 2. تنسيق الصورة داخل النافذة */
+
 .modal-overlay img {
-    max-width: 85%;           /* عرض الصورة 85% من الشاشة */
-    max-height: 85%;          /* طول الصورة 85% من الشاشة */
+    max-width: 85%;          
+    max-height: 85%;         
     border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 15px;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-    transform: scale(0.9);    /* تبدأ أصغر قليلاً لتأثير الدخول */
+    transform: scale(0.9);    
     transition: transform 0.3s ease;
 }
 
-/* 3. زر الخروج (X) */
+
 .close-modal {
     position: absolute;
     top: 25px;
@@ -271,11 +271,11 @@ h1 {
 }
 
 .close-modal:hover {
-    background: rgba(255, 77, 77, 0.8); /* يتحول للون الأحمر عند التمرير */
+    background: rgba(255, 77, 77, 0.8); 
     transform: rotate(90deg);
 }
 
-/* 4. الأزرار تحت الـ Glass الرئيسي */
+
 .certs-wrapper {
     display: flex;
     gap: 20px;
@@ -303,4 +303,30 @@ h1 {
     background: rgba(255, 255, 255, 0.2);
     transform: translateY(-5px);
     border-color: white;
+}
+
+.unique-counter {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 5px 12px;
+    border-radius: 20px; 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 1000;
+}
+
+.view-icon {
+    color: white;
+    font-size: 14px;
+}
+
+.unique-counter img {
+    height: 18px; 
+    
+    filter: brightness(0) invert(1) drop-shadow(0 0 2px white);
 }
