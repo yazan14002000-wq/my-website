@@ -6,6 +6,7 @@
     <title>Iam Mohammad Ibrahim</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
    <div class="glass-box">
@@ -98,6 +99,23 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="certs-wrapper">
+    <button class="cert-glass-item" onclick="openCert('html-img')">
+        <i class="fa-brands fa-html5"></i>
+        <span>HTML Certificate</span>
+    </button>
+
+    <button class="cert-glass-item" onclick="openCert('python-img')">
+        <i class="fa-brands fa-python"></i>
+        <span>Python 101</span>
+    </button>
+</div>
+
+<div id="certModal" class="modal-overlay">
+    <span class="close-modal" onclick="closeCert()">&times;</span>
+    <img id="fullCertImage" src="" alt="Certificate Preview">
 </div>
 
 <audio id="mainAudio"></audio>

@@ -21,3 +21,32 @@ function playTrack(file, time) {
 volumeSlider.addEventListener('input', (e) => {
     audio.volume = e.target.value;
 });
+
+function openCert(type) {
+    const modal = document.getElementById('certModal');
+    const fullImg = document.getElementById('fullCertImage');
+    
+
+    if(type === 'html-img') {
+        fullImg.src = 'html_cert.png'; 
+    } else if(type === 'python-img') {
+        fullImg.src = 'python101.png';
+    }
+    
+    modal.style.display = 'flex';
+
+    setTimeout(() => {
+        fullImg.style.transform = 'scale(1)';
+    }, 10);
+}
+
+function closeCert() {
+    const modal = document.getElementById('certModal');
+    const fullImg = document.getElementById('fullCertImage');
+    
+    fullImg.style.transform = 'scale(0.8)';
+    setTimeout(() => {
+        modal.style.display = 'none';
+    }, 200);
+    document.getElementById('certModal').style.display = 'flex';
+}

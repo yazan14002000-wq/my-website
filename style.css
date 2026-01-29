@@ -221,3 +221,86 @@ h1 {
 /* دوران الأسطوانة */
 .rotating { animation: rotateDisk 3s linear infinite; }
 @keyframes rotateDisk { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+/* 1. حاوية النافذة المنبثقة (تغطي الشاشة بالكامل) */
+.modal-overlay {
+    display: none;             /* مخفية افتراضياً */
+    position: fixed;           /* ثابتة فوق كل العناصر */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85); /* خلفية داكنة لتركيز الانتباه */
+    backdrop-filter: blur(15px);     /* تأثير الضباب الزجاجي */
+    -webkit-backdrop-filter: blur(15px);
+    z-index: 99999;           /* أعلى طبقة في الموقع */
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 2. تنسيق الصورة داخل النافذة */
+.modal-overlay img {
+    max-width: 85%;           /* عرض الصورة 85% من الشاشة */
+    max-height: 85%;          /* طول الصورة 85% من الشاشة */
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    transform: scale(0.9);    /* تبدأ أصغر قليلاً لتأثير الدخول */
+    transition: transform 0.3s ease;
+}
+
+/* 3. زر الخروج (X) */
+.close-modal {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 100000;
+}
+
+.close-modal:hover {
+    background: rgba(255, 77, 77, 0.8); /* يتحول للون الأحمر عند التمرير */
+    transform: rotate(90deg);
+}
+
+/* 4. الأزرار تحت الـ Glass الرئيسي */
+.certs-wrapper {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.cert-glass-item {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 12px 25px;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cert-glass-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+    border-color: white;
+}
