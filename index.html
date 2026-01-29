@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iam Mohammad Ibrahim</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+   <div class="glass-box">
+
+    <h1>Iam Mohammad Ibrahim</h1>
+    <p>
+        <br>I'm a beginner programmer with a great passion for programming.</br>
+        I love drinking coffee, watching movies, and <b>I love you too</b>.</p>
+
+    <h3>Currently, I program using Python and HTML, and I aspire to reach higher levels.
+    </h3>
+    
+<div class="skills-section">
+    <div class="skill">
+        <div class="skill-info">
+            <span>Python</span>
+            <span>15%</span>
+        </div>
+        <div class="progress-line"><span class="python"></span></div>
+    </div>
+    
+    <div class="skill">
+        <div class="skill-info">
+            <span>HTML & CSS</span>
+            <span>40%</span>
+        </div>
+        <div class="progress-line"><span class="html"></span></div>
+    </div>
+</div>
+
+
+<div class="social-links">
+    <a href="https://github.com/yazan14002000-wk" rel="noopener noreferrer">
+        <i class="fa-brands fa-github"></i>
+    </a>
+
+    <a href="https://discord.com/users/1213463519077339176" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-discord"></i>
+    </a>
+    <a href="https://www.instagram.com/juest.ty" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+</div>
+
+
+
+   </div>
+
+
+   <div class="music-container">
+    <button id="mainMusicBtn" onclick="toggleMenu()">
+        <i class="fa-solid fa-compact-disc" id="diskIcon"></i>
+    </button>
+
+    <div id="musicMenu" class="music-menu">
+        <h4 class="menu-title">musics list</h4>
+        
+        <div class="track-list">
+            <button class="track-item" onclick="playTrack('music1.mp3', '4:50')">
+                <div class="track-info">
+                    <i class="fa-solid fa-play"></i>
+                    <span>وانا بعيوني الك ماضل اثر</span>
+                </div>
+                <span class="duration">4:50</span>
+            </button>
+
+            <button class="track-item" onclick="playTrack('music2.mp3', '3:30')">
+                <div class="track-info">
+                    <i class="fa-solid fa-play"></i>
+                    <span>وصلوله خبر عني </span>
+                </div>
+                <span class="duration">3:30</span>
+            </button>
+
+            <button class="track-item" onclick="playTrack('Nothing', '00:00')">
+                <div class="track-info">
+                    <i class="fa-solid fa-play"></i>
+                    <span>Nothing</span>
+                </div>
+                <span class="duration">00:00</span>
+            </button>
+        </div>
+
+        <div class="volume-section">
+            <label>VOLUME control</label>
+            <div class="volume-bar">
+                <i class="fa-solid fa-volume-low"></i>
+                <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.5">
+                <i class="fa-solid fa-volume-high"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<audio id="mainAudio"></audio>
+<script src="script.js"></script>
+</body>
+</html>
